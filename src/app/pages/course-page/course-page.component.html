@@ -1,0 +1,27 @@
+<div class="container course-container">
+    <div  *ngIf="course$ | async as getCourse; else stub" class="wrapper">
+        <div class="header">
+            <div class="title-container">
+                <h4 class="title">{{ getCourse.name }} </h4>
+                <span class="badge">{{ getCourse.time | durationPipe }}</span>
+            </div>
+            <span class="date">{{ getCourse.date | date }}</span>
+        </div>
+        <p class="description">{{ getCourse.description }}</p>
+        <div class="authors">
+            <p class="authors-title">Authors:</p>
+            <span *ngFor="let author of getCourse.authors" class="badge">{{ author }}</span>
+        </div>
+        <div class="video"></div>
+        <div class="buttons">
+            <button class="button button_positive button_icon course-button"><img src="assets/images/pen.svg" class="icon">Edit</button>
+            <button class="button button_negative button_icon course-button"><img src="assets/images/basket.svg" class="icon">Delete</button>
+        </div>
+    </div>
+    <ng-template #stub>
+        <div class="stub-wrapper">
+            <h4 class="stub-title">404</h4>
+        </div>
+
+    </ng-template>
+</div>

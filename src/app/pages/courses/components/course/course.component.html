@@ -1,0 +1,20 @@
+<div
+    courseBorderByDate
+    [courseDate]="courseInfo.date"
+    [ngClass]="{'course_top-rated': courseInfo.topRated}"
+    class="course"
+>
+    <div class="course-info">
+        <p class="date">{{ courseInfo.date | date }}</p>
+        <div class="name-container">
+            <h2 class="title">{{ courseInfo.name | uppercase }}</h2>
+            <span class="badge">{{ courseInfo.time | durationPipe }}</span>
+            <img *ngIf="courseInfo.topRated" src="assets/images/star.svg" class="star">
+        </div>
+        <p class="description">{{ courseInfo.description }}</p>
+    </div>
+    <div class="buttons">
+        <button class="button button_positive button_icon course-button"><img src="assets/images/pen.svg" class="icon">Edit</button>
+        <button class="button button_negative button_icon course-button" (click)="onDelete()" ><img src="assets/images/basket.svg" class="icon">Delete</button>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+@import "../../shared/shared-styles";
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.course-container {
+  margin-top: 32px;
+  background-color: @base-color;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 720px;
+  padding-top: 56px;
+  padding-bottom: 76px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  .h2();
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.video {
+  width: 720px;
+  height: 386px;
+  border-radius: 8px;
+  background-color: #C4C4C4;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.stub-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.stub-title {
+  font-size: 60px;
+  line-height: 70px;
+}

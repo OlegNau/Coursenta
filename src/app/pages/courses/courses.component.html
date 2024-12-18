@@ -1,0 +1,28 @@
+<div class="container courses-container">
+    <div class="search-section">
+        <div class="search-wrapper">
+            <app-search-section
+            ></app-search-section>
+            <img src="assets/images/star.svg" class="star"><input [formControl]="topRatedCheckForSearch"  id="search" type="checkbox">
+            <button routerLink="/new-course" class="button button_positive button_big button_icon"><img src="assets/images/plus.svg" class="icon" alt="иконка добавления курса">Add course</button>
+        </div>
+    </div>
+    <div class="wrapper">
+        <ng-container *ngIf="!(isLoading$ | async)">
+            <app-course
+                [routerLink]="['course/',course.id]"
+                *ngFor="let course of coursesCards$ | async"
+                class="courses"
+                [courseInfo]="course"
+                (delete)="onDelete()"
+            ></app-course>
+            <button class="button_positive load-button" (click)="onClick()">Load more</button>
+        </ng-container>
+        <ng-container *ngIf="isLoading$ | async">
+            <div class="loader-wrapper">
+                <h2 class="loader">Please wait while courses are loading...</h2>
+            </div>
+
+        </ng-container>
+    </div>
+</div>

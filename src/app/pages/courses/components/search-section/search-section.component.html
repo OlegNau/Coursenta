@@ -1,0 +1,5 @@
+<div class="input-container">
+    <label for="search" class="visually-hidden">Поиск</label>
+    <input id="search" [formControl]="searchControl" placeholder="Name, fragment or date" class="input">
+    <p class="error" *ngIf="this.searchControl.errors">Введите не менее 3 и не более 15 символов</p>
+</div>

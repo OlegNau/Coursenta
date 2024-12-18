@@ -1,0 +1,60 @@
+@import "../../shared/shared-styles";
+@import "../../../variables.less";
+@import "../../../typography.less";
+
+:host {
+  display: block;
+  background-color: @base-color;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.logo {
+  width: 120px;
+  height: 16px;
+}
+
+.user-container {
+  display: flex;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.user-name {
+  .accent-font();
+}
+
+.log-out {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  color: @accent-color;
+
+  &:hover {
+    color: @accent-color-hover;
+  }
+}
+
+.log-out-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 9px;
+}
+
+.log-out-text {
+  .accent-font();
+}

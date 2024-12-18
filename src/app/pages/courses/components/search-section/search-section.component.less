@@ -1,0 +1,31 @@
+@import "../../../../../variables.less";
+@import "../../../../shared/shared-styles";
+
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+  margin-right: 32px;
+}
+
+.input {
+  width: 587px;
+  padding: 12px 16px;
+  border-radius: @radius-s;
+  border: 1px solid @light-border;
+  background-color: @base-color;
+
+  &:hover {
+    border: 1px solid @light-border-hover;
+  }
+}
+
+.error {
+  position: absolute;
+  bottom: -24px;
+  left: 8px;
+  color: @negative;
+}

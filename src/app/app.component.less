@@ -1,0 +1,31 @@
+@import "../variables.less";
+@import "./shared/shared-styles";
+
+:root {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.header {
+    z-index: 3;
+    box-shadow: 0px 4px 12px @shadow-color;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: @main-background;
+}

@@ -1,0 +1,68 @@
+@import "../../variables.less";
+@import "../../typography.less";
+
+.container {
+  width: 1152px;
+  height: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.button {
+  .accent-font();
+  padding: 12px 32px;
+  border-radius: @radius-l;
+
+  &_positive {
+    color: @accent-color;
+    background-color: @positive-background;
+
+    &:hover {
+      background-color: @hover-positive-background;
+    }
+
+    &:active {
+      background-color: @active-positive-background;
+    }
+  }
+
+  &_negative {
+    color: @negative;
+    background-color: @negative-background;
+
+    &:hover {
+      background-color: @hover-negative-background;
+    }
+
+    &:active {
+      background-color: @active-negative-background;
+    }
+  }
+
+  &_big {
+    .big-accent-font();
+  }
+
+  &_icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.date {
+  .secondary();
+  color: @extra-light-font-color;
+}
+
+.badge {
+  .secondary();
+  padding: 4px 8px;
+  border-radius: @radius-m;
+  background-color: @extra-light-background;
+}
+
+.text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
